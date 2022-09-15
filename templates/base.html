@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+	{% block head %}{% endblock %}
+</head>
+<body>
+	
+		<header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+      <a class="mr-5 hover:text-white" href="{{ url_for('attacks')}}">Explore</a>
+      <a class="mr-5 hover:text-white">Learn</a>
+      <a class="mr-5 hover:text-white">About Us</a>
+      <a class="hover:text-white">Contact</a>
+    </nav>
+    <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
+      <img src="{{ url_for('static', filename = 'images/logo.png') }}" alt="" class="h-44">
+      
+    </a>
+    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Join Now!        
+      </button>
+    </div>
+  </div>
+</header>
+
+
+	{% block body %}{% endblock %}
+</body>
+</html>
